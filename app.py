@@ -65,7 +65,7 @@ uploaded_file = st.file_uploader("Upload gambar", type=["jpg", "jpeg", "png"])
 
 if uploaded_file:
     image = Image.open(uploaded_file)
-    st.image(image, caption="Gambar yang diunggah", use_column_width=True)
+    st.image(image, caption="Gambar yang diunggah", use_container_width=True)
 
     with st.spinner("Menganalisis gambar..."):
         ocr_result = ocr_with_gemini(image)
